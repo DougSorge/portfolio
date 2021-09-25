@@ -1,0 +1,73 @@
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100%;
+}
+
+// colors
+$color-blue-darkest: #29638b;
+$color-blue-dark: #3099fe;
+$color-blue-medium: #60b2fe;
+$color-blue-light: #98cbdd;
+$color-blue-lightest: #a8e4fa;
+
+$color-light-gray: #eee;
+$color-white: #fff;
+$color-black: #000;
+
+// common styles buttons
+.button {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+
+.button-label {
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
+  letter-spacing: 1.5px;
+  margin-top: 1.5rem;
+  color: $color-white;
+  font-size: 2.5rem;
+  transition: opacity 1.3s;
+}
+
+.button-label-open {
+  opacity: 1;
+}
+
+.button-label-closed {
+  opacity: 0;
+}
+
+.button-container {
+  border-radius: 50%;
+  position: absolute;
+  height: 10rem;
+  width: 10rem;
+  transition: all 1s;
+}
+
+.glow-light {
+  box-shadow: 0 0 1rem 5px $color-blue-lightest;
+}

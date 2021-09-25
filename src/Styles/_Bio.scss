@@ -1,0 +1,15 @@
+.bio-container-open {
+  bottom: 20%;
+  right: 20%;
+  opacity: 1;
+  transition: all 1s 1.4s;
+  z-index: 1;
+}
+
+.bio-container-closed {
+  bottom: 50%;
+  right: 50%;
+  opacity: 0;
+  transform: translate(50%, 50%);
+  z-index: -1;
+}

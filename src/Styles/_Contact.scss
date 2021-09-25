@@ -1,0 +1,15 @@
+.contact-container-open {
+  bottom: 20%;
+  left: 20%;
+  opacity: 1;
+  transition: all 1s 0.8s;
+  z-index: 1;
+}
+
+.contact-container-closed {
+  bottom: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(50%, -50%);
+  z-index: -1;
+}
