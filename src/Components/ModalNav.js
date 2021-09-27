@@ -1,18 +1,11 @@
 import React from "react";
-import classNames from "classnames";
 
-export default function Bio(props) {
-  let containerClasses = classNames({
-    "button-container": true,
-    "bio-container-closed": props.isOpen === false,
-    "bio-container-open": props.isOpen === true,
-  });
-
-  let labelClasses = classNames({
-    "button-label": true,
-    "button-label-closed": props.isOpen === false,
-    "button-label-open": props.isOpen === true,
-  });
+export default function ModalNav(props) {
+  const resumeContent = {
+    id: "resume",
+    heading: "My Resume",
+    img: "images/myResume.png",
+  };
 
   const bioContent = {
     id: "bio",
@@ -27,25 +20,36 @@ export default function Bio(props) {
     ],
   };
 
-  let handleClick = () => {
-    props.getContent(bioContent);
-    props.overlay(true);
+  const handleResumeClick = (content) => {
+    props.changeContent(content);
   };
+
+  const handleBioClick = (content) => {
+    props.changeContent(content);
+  };
+
   return (
-    <>
-      <div
-        className={containerClasses}
+    <div className="modal-button-section">
+      <p
+        className="button-label nav-button"
         onClick={() => {
-          handleClick();
+          handleResumeClick(resumeContent);
         }}
       >
-        <img
-          className="button glow-light"
-          src="images/famAtDis.jpg"
-          alt="img for bio button"
-        />
-        <h2 className={labelClasses}>Bio</h2>
-      </div>
-    </>
+        Resume
+      </p>
+      <p className="button-label">Projects</p>
+
+      <p
+        className="button-label nav-button"
+        onClick={() => {
+          handleBioClick(bioContent);
+        }}
+      >
+        Bio
+      </p>
+
+      <p className="button-label">Contact</p>
+    </div>
   );
 }

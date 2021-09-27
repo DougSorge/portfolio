@@ -1,0 +1,145 @@
+.overlay {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba($color-black, 0.9);
+  z-index: 100;
+  position: absolute;
+  top: -100%;
+  left: 0;
+
+  .modal {
+    height: 95%;
+    padding-left: 3rem;
+    width: 100%;
+    display: flex;
+    z-index: 100;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+
+    .modal-content {
+      width: 80%;
+      height: 100%;
+      background-color: $color-white;
+      z-index: 100;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: rgba(238, 238, 238, 0.582) 0px 1px 3px,
+        rgba(207, 207, 207, 0.568) 0px 1px 2px;
+    }
+  }
+}
+
+// close icon
+.close-icon {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  transition: all 0.2s;
+
+  img {
+    margin-left: 1rem;
+    width: 25px;
+    height: 25px;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+// heading styling
+.modal-heading {
+  font-size: 4rem;
+  letter-spacing: 1.2px;
+  font-family: "Bebas Neue", monospace;
+  color: transparent;
+  background-image: radial-gradient(
+    rgba($color-blue-dark, 1),
+    rgba($color-blue-medium, 1)
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 3px 3px rgba($color-blue-lightest, 0.8);
+}
+
+// resume modal styling
+.resumeImg {
+  width: 90%;
+  max-width: 700px;
+  height: 90%;
+  border-radius: 25px;
+  box-shadow: 2px 1rem 1rem $color-black;
+}
+
+//bio modal styling
+.familyImg {
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+.bio-paragraph {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  width: 70ch;
+
+  &:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+}
+
+// animations
+.overlay-animate-in {
+  animation: overlay-animate-in 1.3s forwards;
+}
+
+.overlay-animate-out {
+  animation: overlay-animate-out;
+  animation-duration: 1s;
+}
+
+.modal-scale-up {
+  animation: modal-scale-up;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes overlay-animate-in {
+  0% {
+    top: -100%;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes overlay-animate-out {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes modal-scale-up {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
