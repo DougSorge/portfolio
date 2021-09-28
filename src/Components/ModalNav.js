@@ -20,6 +20,49 @@ export default function ModalNav(props) {
     ],
   };
 
+  const projectsContent = {
+    id: "projects",
+    heading: "My Projects",
+    projects: [
+      {
+        title: "Headless CMS Blog",
+        link: "https://blissful-tereshkova-9ced79.netlify.app/",
+        gitLink: "https://github.com/DougSorge/blogTemplate",
+        img: "images/blogProjectScreenShot.png",
+      },
+      {
+        title: "Weather Dashboard",
+        description:
+          "Built with WeatherAPI.com, JS and Sass. (Warning: Not yet mobile friendly)",
+        link: "",
+        gitLink: "https://github.com/DougSorge/weatherApp",
+        img: "images/weatherProjectScreenShot.png",
+      },
+    ],
+  };
+
+  const contactContent = {
+    id: "contact",
+    heading: "Contact Info",
+    contacts: [
+      {
+        URL: `https://twitter.com/SorgeForge`,
+        Icon: "fab fa-twitter",
+        name: `@SorgeForge on Twitter`,
+      },
+      {
+        URL: "https://www.linkedin.com/in/douglassorge/",
+        Icon: "fab fa-linkedin-in",
+        name: "Douglas Sorge on Linked in",
+      },
+      {
+        URL: `sorge.douglas@gmail.com`,
+        Icon: `far fa-envelope`,
+        name: `Sorge.douglas@gmail `,
+      },
+    ],
+  };
+
   const handleResumeClick = (content) => {
     props.changeContent(content);
   };
@@ -28,17 +71,32 @@ export default function ModalNav(props) {
     props.changeContent(content);
   };
 
+  const handleProjectsClick = (content) => {
+    props.changeContent(content);
+  };
+
+  const handleContactClick = (content) => {
+    props.changeContent(content);
+  };
+
   return (
     <div className="modal-button-section">
       <p
-        className="button-label nav-button"
+        className="button-label"
         onClick={() => {
           handleResumeClick(resumeContent);
         }}
       >
         Resume
       </p>
-      <p className="button-label">Projects</p>
+      <p
+        className="button-label"
+        onClick={() => {
+          handleProjectsClick(projectsContent);
+        }}
+      >
+        Projects
+      </p>
 
       <p
         className="button-label nav-button"
@@ -49,7 +107,14 @@ export default function ModalNav(props) {
         Bio
       </p>
 
-      <p className="button-label">Contact</p>
+      <p
+        className="button-label"
+        onClick={() => {
+          handleContactClick(contactContent);
+        }}
+      >
+        Contact
+      </p>
     </div>
   );
 }

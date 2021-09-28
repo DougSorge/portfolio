@@ -1,0 +1,187 @@
+.modal {
+  height: 95%;
+  width: 100%;
+  display: flex;
+  padding-left: 3rem;
+  z-index: 100;
+  align-items: center;
+  position: relative;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+
+  .modal-content {
+    width: 95%;
+    height: 100%;
+    background-color: $color-white;
+    z-index: 100;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(238, 238, 238, 0.582) 0px 1px 3px,
+      rgba(207, 207, 207, 0.568) 0px 1px 2px;
+
+    // heading styling
+    .modal-heading {
+      font-size: 4rem;
+
+      letter-spacing: 1.2px;
+      font-family: "Bebas Neue", monospace;
+      color: transparent;
+      background-image: radial-gradient(
+        rgba($color-blue-dark, 1),
+        rgba($color-blue-medium, 1)
+      );
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      text-shadow: 0px 3px 3px rgba($color-blue-lightest, 0.8);
+    }
+
+    // resume modal styling
+    .resumeImg {
+      width: 90%;
+      max-width: 700px;
+      max-height: 90%;
+      margin-bottom: 2rem;
+      border-radius: 25px;
+      box-shadow: 0 0 1rem 2px $color-blue-lightest;
+    }
+
+    //bio modal styling
+    .familyImg {
+      width: 50%;
+      max-width: 500px;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+    }
+
+    .bio-paragraph {
+      font-family: "Poppins", Arial, Helvetica, sans-serif;
+      font-size: 1.6rem;
+      width: 80%;
+      &:not(:last-of-type) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .projects-container {
+      height: 100%;
+      align-items: flex-start;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      overflow-y: scroll;
+      text-align: center;
+      padding-top: 2rem;
+    }
+
+    .project {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-basis: 40%;
+      min-width: 250px;
+      border: 1px solid black;
+      border-radius: 3px;
+    }
+
+    .project-img {
+      width: 100%;
+    }
+
+    .project-paragraph {
+      font-family: "Poppins", Arial, Helvetica, sans-serif;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      width: 80%;
+      text-align: center;
+    }
+
+    .project-link {
+      text-decoration: none;
+      font-family: "Poppins", Arial, Helvetica, sans-serif;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        height: 3px;
+        display: block;
+        background-color: rgba($color-blue-dark, 1);
+        width: 0;
+        transition: width 0.3s;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+
+  .modal-content-contact {
+    justify-content: center;
+    font-family: "Poppins", Arial, sans-serif;
+
+    .contact-paragraph {
+      font-size: 2rem;
+      text-align: center;
+      padding-inline: 4rem;
+      margin-block: 2rem;
+    }
+
+    .contact-method {
+      a,
+      i {
+        text-decoration: none;
+        font-size: 2rem;
+        margin: 2rem 5px;
+      }
+
+      a {
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: "";
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -5px;
+          height: 3px;
+          display: block;
+          background-color: rgba($color-blue-dark, 1);
+          width: 0;
+          transition: width 0.3s;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.modal-scale-up {
+  animation: modal-scale-up;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes modal-scale-up {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

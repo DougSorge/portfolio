@@ -46,8 +46,16 @@ function App() {
         overlay={getOverlayStatus}
         getContent={changeContent}
       />
-      <Projects isOpen={isOpen} overlay={getOverlayStatus} />
-      <Contact isOpen={isOpen} overlay={getOverlayStatus} />
+      <Projects
+        isOpen={isOpen}
+        overlay={getOverlayStatus}
+        getContent={changeContent}
+      />
+      <Contact
+        isOpen={isOpen}
+        overlay={getOverlayStatus}
+        getContent={changeContent}
+      />
       <Bio
         isOpen={isOpen}
         overlay={getOverlayStatus}

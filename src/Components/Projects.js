@@ -14,9 +14,41 @@ export default function Projects(props) {
     "button-label-open": props.isOpen === true,
   });
 
+  const projectsContent = {
+    id: "projects",
+    heading: "My Projects",
+    projects: [
+      {
+        title: "Headless CMS Blog",
+        description: "Built with React and Sanity IO",
+        link: "https://blissful-tereshkova-9ced79.netlify.app/",
+        gitLink: "https://github.com/DougSorge/blogTemplate",
+        img: "images/blogProjectScreenShot.png",
+      },
+      {
+        title: "Weather Dashboard",
+        description:
+          "Built with WeatherAPI.com, JS and Sass. (Warning: Not yet mobile friendly)",
+        link: "",
+        gitLink: "https://github.com/DougSorge/weatherApp",
+        img: "images/weatherProjectScreenShot.png",
+      },
+    ],
+  };
+
+  let handleClick = () => {
+    props.getContent(projectsContent);
+    props.overlay(true);
+  };
+
   return (
     <>
-      <div className={containerClasses}>
+      <div
+        className={containerClasses}
+        onClick={() => {
+          handleClick();
+        }}
+      >
         <img
           className="button glow-light"
           src="images/projectsBtn.jpg"

@@ -20,8 +20,12 @@ export default function Overlay(props) {
 
   return (
     <section className={overlayClasses}>
-      <span onClick={closeModal} className="close-icon">
-        <img src="images/closeIcon.png" alt="close modal icon" />
+      <span className="close-icon">
+        <img
+          onClick={closeModal}
+          src="images/closeIcon.png"
+          alt="close modal icon"
+        />
       </span>
 
       <ModalContent

@@ -1,0 +1,60 @@
+.overlay {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba($color-black, 0.9);
+  z-index: 100;
+  position: absolute;
+  top: -100%;
+  left: 0;
+
+  // close icon
+  .close-icon {
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: -3rem;
+      cursor: pointer;
+      width: 25px;
+      height: 25px;
+      transition: all 0.2s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+// animations
+.overlay-animate-in {
+  animation: overlay-animate-in 1.3s forwards;
+}
+
+.overlay-animate-out {
+  animation: overlay-animate-out;
+  animation-duration: 1s;
+}
+
+@keyframes overlay-animate-in {
+  0% {
+    top: -100%;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes overlay-animate-out {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 100%;
+  }
+}

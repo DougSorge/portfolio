@@ -14,13 +14,45 @@ export default function Contact(props) {
     "button-label-open": props.isOpen === true,
   });
 
+  const contactContent = {
+    id: "contact",
+    heading: "Contact Info",
+    contacts: [
+      {
+        URL: `https://twitter.com/SorgeForge`,
+        Icon: "fab fa-twitter",
+        name: `@SorgeForge on Twitter`,
+      },
+      {
+        URL: "https://www.linkedin.com/in/douglassorge/",
+        Icon: "fab fa-linkedin-in",
+        name: "Douglas Sorge on Linked in",
+      },
+      {
+        URL: `sorge.douglas@gmail.com`,
+        Icon: `far fa-envelope`,
+        name: `Sorge.douglas@gmail `,
+      },
+    ],
+  };
+
+  let handleClick = () => {
+    props.getContent(contactContent);
+    props.overlay(true);
+  };
+
   return (
     <>
-      <div className={containerClasses}>
+      <div
+        className={containerClasses}
+        onClick={() => {
+          handleClick();
+        }}
+      >
         <img
           className="button glow-light"
           src="images/contact.jpg"
-          alt="img for projects button"
+          alt="img for contact button"
         />
         <h2 className={labelClasses}>Contact</h2>
       </div>
