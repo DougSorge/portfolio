@@ -20,13 +20,7 @@ export default function Overlay(props) {
 
   return (
     <section className={overlayClasses}>
-      <span className="close-icon">
-        <img
-          onClick={closeModal}
-          src="images/closeIcon.png"
-          alt="close modal icon"
-        />
-      </span>
+      <i className="far fa-times-circle close-icon" onClick={closeModal}></i>
 
       <ModalContent
         overlayStatus={props.overlayStatus}

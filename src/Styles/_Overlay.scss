@@ -12,19 +12,13 @@
     position: absolute;
     top: 1.5rem;
     right: 1rem;
+    z-index: 300;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
 
-    img {
-      position: absolute;
-      top: 0;
-      left: -3rem;
-      cursor: pointer;
-      width: 25px;
-      height: 25px;
-      transition: all 0.2s;
-
-      &:hover {
-        transform: scale(1.2);
-      }
+    &:hover {
+      transform: scale(1.2);
     }
   }
 }
@@ -56,5 +50,17 @@
 
   100% {
     top: 100%;
+  }
+}
+
+@media only screen and(max-width: 750px) {
+  .overlay {
+    .close-icon {
+      top: 1.5rem;
+      right: 1rem;
+      z-index: 1000;
+      color: black;
+      font-size: 3rem;
+    }
   }
 }

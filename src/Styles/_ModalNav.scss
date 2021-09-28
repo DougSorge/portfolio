@@ -20,3 +20,11 @@
 .active {
   text-shadow: 0 2px 5px $color-blue-lightest;
 }
+
+@media only screen and (max-width: 750px) {
+  .modal-button-section {
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+  }
+}

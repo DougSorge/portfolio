@@ -20,7 +20,9 @@ export default function ModalContent(props) {
         <section className={modalClasses}>
           <div className="modal-content modal-content-resume">
             {/* <h1 className="modal-heading">{content.heading}</h1> */}
-
+            <a href="images/resumeDL.pdf" download className="project-link">
+              Download Resume PDF
+            </a>
             <img className="resumeImg" src={content.img} alt="Dougs Resume" />
           </div>
           <ModalNav changeContent={props.changeContent} />
@@ -30,7 +32,7 @@ export default function ModalContent(props) {
     case "bio":
       return (
         <section className={modalClasses}>
-          <div className="modal-content ">
+          <div className="modal-content modal-content-bio">
             {/* <h1 className="modal-heading">{content.heading}</h1> */}
             <img className="familyImg" src={content.img} alt="Dougs Resume" />
             {content.description &&
@@ -103,6 +105,12 @@ export default function ModalContent(props) {
                   </div>
                 );
               })}
+            <div className="contact-method">
+              <i className={content.email.icon}></i>
+              <a href="mailto:{content.email.emailAddress}">
+                {content.email.emailAddress}
+              </a>
+            </div>
           </div>
           <ModalNav changeContent={props.changeContent} />
         </section>

@@ -55,12 +55,11 @@ export default function ModalNav(props) {
         Icon: "fab fa-linkedin-in",
         name: "Douglas Sorge on Linked in",
       },
-      {
-        URL: `sorge.douglas@gmail.com`,
-        Icon: `far fa-envelope`,
-        name: `Sorge.douglas@gmail `,
-      },
     ],
+    email: {
+      emailAddress: "sorge.douglas@gmail.com",
+      icon: `far fa-envelope`,
+    },
   };
 
   const handleResumeClick = (content) => {

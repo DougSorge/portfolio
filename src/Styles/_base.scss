@@ -73,3 +73,16 @@ $color-black: #000;
 .glow-light {
   box-shadow: 0 0 1rem 5px $color-blue-lightest;
 }
+
+@media only screen and(max-width: 400px) {
+  .button {
+    height: 7rem;
+    width: 7rem;
+  }
+
+  .button-label {
+    font-size: 1.5rem;
+    text-align: left;
+    padding-left: 1rem;
+  }
+}

@@ -44,7 +44,7 @@ export default function Bio(props) {
           src="images/famAtDis.jpg"
           alt="img for bio button"
         />
-        <h2 className={labelClasses}>Bio</h2>
+        <h2 className={labelClasses}>About</h2>
       </div>
     </>
   );

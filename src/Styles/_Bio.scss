@@ -13,3 +13,14 @@
   transform: translate(50%, 50%);
   z-index: -1;
 }
+
+@media only screen and(max-width: 400px) {
+  .bio-container-open {
+    bottom: 18%;
+    right: 2%;
+
+    h2 {
+      padding-left: 1.6rem !important;
+    }
+  }
+}
