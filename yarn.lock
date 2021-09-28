@@ -9196,7 +9196,7 @@
     "nanocolors" "^0.2.2"
     "source-map" "^0.6.1"
 
-"postcss@^8.0.0", "postcss@^8.1.0":
+"postcss@^8.0.0", "postcss@^8.1.0", "postcss@^8.3.8":
   "integrity" "sha512-GT5bTjjZnwDifajzczOC+r3FI3Cu+PgPvrsjhQdRqa2kTJ4968/X9CUce9xttIB0xOs5c6xf0TCWZo/y9lF6bA=="
   "resolved" "https://registry.npmjs.org/postcss/-/postcss-8.3.8.tgz"
   "version" "8.3.8"
