@@ -11,19 +11,36 @@ export default function OpenButton(props) {
     "main-button-animate-close": isAnimated === false,
   });
 
+  let labelClasses = classNames({
+    "button-label": true,
+    "button-label-closed": props.isOpen === false,
+    "button-label-open": props.isOpen === true,
+    "center-label": true,
+  });
+
   function clicked() {
     props.handleClick();
     setIsAnimated(!isAnimated);
   }
 
   return (
+    // <>
+    //   <img
+    //     className={buttonAnimate}
+    //     src="/images/meAndAdam.jpg"
+    //     alt="Me and my son Adam"
+    //     onClick={clicked}
+    //   />
+    // </>
+
     <>
       <img
-        class={buttonAnimate}
+        className={buttonAnimate}
+        onClick={clicked}
         src="/images/meAndAdam.jpg"
         alt="Me and my son Adam"
-        onClick={clicked}
       />
+      <h2 className={labelClasses}>Click Me</h2>
     </>
   );
 }

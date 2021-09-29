@@ -22,6 +22,14 @@
   animation: rotateToClose 1s;
 }
 
+.center-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  opacity: 0.6;
+}
+
 @keyframes spinOnClick {
   0% {
     transform: translate(-50%, -50%) rotate3d(0, 1, 0, 0);

@@ -57,6 +57,7 @@
       max-width: 500px;
       margin-bottom: 1rem;
       border-radius: 8px;
+      padding-top: 6rem;
     }
 
     .bio-paragraph {
@@ -250,13 +251,33 @@
       }
 
       .familyImg {
-        padding-top: 325px;
+        padding-top: 125px;
         border-radius: 0;
       }
     }
     .modal-content-bio {
       overflow-y: scroll;
       // padding-top: 12rem;
+    }
+  }
+}
+
+@media only screen and(max-width:400px) {
+  .modal {
+    .modal-content {
+      .familyImg {
+        padding-top: 200px;
+      }
+    }
+  }
+}
+
+@media only screen and(max-width:300px) {
+  .modal {
+    .modal-content {
+      .familyImg {
+        display: none;
+      }
     }
   }
 }
