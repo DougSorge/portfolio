@@ -4,7 +4,7 @@
   background-color: rgba($color-black, 0.9);
   z-index: 100;
   position: absolute;
-  top: -100%;
+  top: -150%;
   left: 0;
 
   // close icon
@@ -35,7 +35,7 @@
 
 @keyframes overlay-animate-in {
   0% {
-    top: -100%;
+    top: -150%;
   }
 
   100% {

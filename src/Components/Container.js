@@ -11,7 +11,7 @@ export default function Container(props) {
       <p className="site-description">
         This page was built using React and Sass |
         <a
-          className="contact-link"
+          className="project-link"
           href="https://github.com/DougSorge"
           target="_blank"
           rel="noreferrer"
