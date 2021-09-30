@@ -33,16 +33,18 @@ export default function ModalContent(props) {
       return (
         <section className={modalClasses}>
           <div className="modal-content modal-content-bio">
-            {/* <h1 className="modal-heading">{content.heading}</h1> */}
+            <h1 className="modal-heading">{content.heading}</h1>
             <img className="familyImg" src={content.img} alt="Dougs Resume" />
-            {content.description &&
-              content.description.map((paragraph, index) => {
-                return (
-                  <p className="bio-paragraph" key={index}>
-                    {paragraph}
-                  </p>
-                );
-              })}
+            <div className="modal-content-bio-description">
+              {content.description &&
+                content.description.map((paragraph, index) => {
+                  return (
+                    <p className="bio-paragraph" key={index}>
+                      {paragraph}
+                    </p>
+                  );
+                })}
+            </div>
           </div>
           <ModalNav changeContent={props.changeContent} />
         </section>

@@ -19,6 +19,7 @@
     border-radius: 8px;
     display: flex;
     flex-direction: column;
+    position: relative;
     justify-content: center;
     align-items: center;
     box-shadow: rgba(238, 238, 238, 0.582) 0px 1px 3px,
@@ -57,15 +58,22 @@
       max-width: 500px;
       margin-bottom: 1rem;
       border-radius: 8px;
-      padding-top: 6rem;
+
+      // position: relative;
+      // top: 1rem;
     }
 
-    .bio-paragraph {
-      font-family: "Poppins", Arial, Helvetica, sans-serif;
-      font-size: 1.6rem;
-      width: 80%;
-      &:not(:last-of-type) {
-        margin-bottom: 1rem;
+    .modal-content-bio-description {
+      overflow-y: scroll;
+
+      .bio-paragraph {
+        font-family: "Poppins", Arial, Helvetica, sans-serif;
+        font-size: 1.6rem;
+        width: 80%;
+        margin: auto;
+        &:not(:last-of-type) {
+          margin-bottom: 1rem;
+        }
       }
     }
 
@@ -249,34 +257,21 @@
         margin-bottom: 1rem;
         position: relative;
       }
-
-      .familyImg {
-        padding-top: 125px;
-        border-radius: 0;
-      }
     }
     .modal-content-bio {
       overflow-y: scroll;
-      // padding-top: 12rem;
     }
   }
 }
 
-@media only screen and(max-width:400px) {
+@media only screen and(max-width:450px) {
   .modal {
     .modal-content {
-      .familyImg {
-        padding-top: 200px;
+      .modal-content-bio-description {
+        padding: 1rem;
       }
-    }
-  }
-}
-
-@media only screen and(max-width:300px) {
-  .modal {
-    .modal-content {
       .familyImg {
-        display: none;
+        margin-top: 1rem;
       }
     }
   }

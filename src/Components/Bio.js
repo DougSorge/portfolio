@@ -19,10 +19,10 @@ export default function Bio(props) {
     heading: "About me",
     img: "images/famAtDis.jpg",
     description: [
-      "Thanks for checking out my portfolio! My name is Douglas Sorge and I'm a 30 year old Front End Web Developer.",
-      "I live with my Fiance, Jennifer, our 2 year old Son Adam (who happens to be completely blind) and our 2 cats, Poopy and Chloe.",
-      "Being a special needs father has taught me A LOT of lessons  and spurred tremendous personal grotwth. Life and health are precious, precarious things. We need to treat our lives like the very temporary miracles that they are.",
-      "I have worked in many different industries including Food Services, Retail, Construction and Finance. I love interracting with customers and I'm quite good at it. I hope to bring that talent and passion (along with my technical abilitiy) to the World of Web.",
+      "Thanks for checking out my portfolio! My name is Douglas Sorge and I'm a 30 year old Front End Web Developer. I've been self learning since 2018 and completed NuCamp's Front End Development BootCamp in Fall of 2021.",
+      "I live with my Fiance, Jennifer, our 2 year old Son Adam (who is completely blind) and our 2 cats, Poopy and Chloe.",
+      "Being a special needs father has taught me A LOT of lessons  and spurred tremendous personal growth. Life and health are precious, precarious things. We need to treat our lives like the very temporary miracles that they are.",
+      "I have worked in many different industries including Food Services, Retail, Construction and Finance. Along the way I've learned how to learn, when to speak up and when to listen. I can also spin you a perfect pizza should the need arise.",
       "As far as hobbies go I love to play darts, ride bike trails, play video games and write stories.",
     ],
   };

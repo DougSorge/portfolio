@@ -6,4 +6,19 @@
   overflow: hidden;
   background-size: cover;
   background-position: center;
+
+  .site-description {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    color: $color-white;
+    font-size: 1rem;
+    font-family: "Poppins", Arial, sans-serif;
+
+    & a {
+      padding-left: 3px;
+    }
+  }
 }
