@@ -16,6 +16,7 @@ export default function OpenButton(props) {
     "button-label-closed": props.isOpen === false,
     "button-label-open": props.isOpen === true,
     "center-label": true,
+    hide: props.isOpen === true,
   });
 
   function clicked() {

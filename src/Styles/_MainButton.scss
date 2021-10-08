@@ -34,6 +34,10 @@
   animation-fill-mode: forwards;
 }
 
+.hide {
+  opacity: 0;
+}
+
 @keyframes spinOnClick {
   0% {
     transform: translate(-50%, -50%) rotate3d(0, 1, 0, 0);
