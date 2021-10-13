@@ -26,7 +26,7 @@ export default function ModalNav(props) {
     projects: [
       {
         title: "Headless CMS Blog",
-        link: "https://blissful-tereshkova-9ced79.netlify.app/",
+        link: "https://dougsawesomeblog.netlify.app/",
         gitLink: "https://github.com/DougSorge/blogTemplate",
         img: "images/blogProjectScreenShot.png",
       },

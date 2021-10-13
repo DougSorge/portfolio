@@ -31,11 +31,6 @@
   animation: clickMeFadeIn;
   animation-delay: 2.5s;
   animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-.hide {
-  opacity: 0;
 }
 
 @keyframes spinOnClick {

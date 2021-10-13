@@ -16,7 +16,7 @@ export default function OpenButton(props) {
     "button-label-closed": props.isOpen === false,
     "button-label-open": props.isOpen === true,
     "center-label": true,
-    hide: props.isOpen === true,
+    hide: isAnimated === true,
   });
 
   function clicked() {
@@ -25,15 +25,6 @@ export default function OpenButton(props) {
   }
 
   return (
-    // <>
-    //   <img
-    //     className={buttonAnimate}
-    //     src="/images/meAndAdam.jpg"
-    //     alt="Me and my son Adam"
-    //     onClick={clicked}
-    //   />
-    // </>
-
     <>
       <img
         className={buttonAnimate}

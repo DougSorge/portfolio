@@ -21,7 +21,7 @@ export default function Projects(props) {
       {
         title: "Headless CMS Blog",
         description: "Built with React and Sanity IO",
-        link: "https://blissful-tereshkova-9ced79.netlify.app/",
+        link: "https://dougsawesomeblog.netlify.app/",
         gitLink: "https://github.com/DougSorge/blogTemplate",
         img: "images/blogProjectScreenShot.png",
       },
