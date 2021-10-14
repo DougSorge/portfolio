@@ -25,14 +25,6 @@ export default function Projects(props) {
         gitLink: "https://github.com/DougSorge/blogTemplate",
         img: "images/blogProjectScreenShot.png",
       },
-      {
-        title: "Weather Dashboard",
-        description:
-          "Built with WeatherAPI.com, JS and Sass. (Warning: Not yet mobile friendly)",
-        link: "",
-        gitLink: "https://github.com/DougSorge/weatherApp",
-        img: "images/weatherProjectScreenShot.png",
-      },
     ],
   };
 
