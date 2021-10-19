@@ -34,7 +34,7 @@ export default function ModalContent(props) {
         <section className={modalClasses}>
           <div className="modal-content modal-content-bio">
             <h1 className="modal-heading">{content.heading}</h1>
-            <img className="familyImg" src={content.img} alt="Dougs Resume" />
+            <img className="familyImg" src={content.img} alt="dougs family" />
             <div className="modal-content-bio-description">
               {content.description &&
                 content.description.map((paragraph, index) => {
