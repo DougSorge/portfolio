@@ -30,6 +30,12 @@ export default function ModalNav(props) {
         gitLink: "https://github.com/DougSorge/blogTemplate",
         img: "images/blogProjectScreenShot.png",
       },
+      {
+        title: "Live Weather Dashboard",
+        link: "https://dougsawesomeweatherapp.netlify.app",
+        gitLink: "https://github.com/DougSorge/weatherAppv2",
+        img: "images/weatherAppScreenShot.png",
+      },
     ],
   };
 
